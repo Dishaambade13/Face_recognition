@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Adding New Data</title>
+    <style>
+        a:link, a:visited {
+          /* background-color: white; */
+          color: black;
+          padding: 15px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        a:hover, a:active {
+          background-color: rgb(14, 187, 14);
+        }
+        </style>
+</head>
+<body>
+    <div class="table-responsive">
+    <table class="table table-dark table-borderless">
+        <tr>
+            <td>
+                <B>STEPS FOR ADDING NEW DATA</B>
+                <ol>
+                    <li>Enter your name in the below text box.</li>
+                    <li>Now, click on 'Add' whcih will enable the camera.</li>
+                    <li>A single itration takes 20 photos.</li>
+                    <li>Now, this photos will be added to the data.</li>
+                </ol>
+                Algorithm used: 
+                <b>Local Binary Pattern Histogram(LBPH)</b>
+                <br>It is one of the oldest algorithm used for face recognition.<br>
+                Local Binary Pattern (LBP) is a simple yet very efficient texture operator<br> which labels the
+                pixels of an image by thresholding the neighborhood <br>of each pixel and considers the result as a binary number.
+            </td>
+            <td>
+                <b>Examples of facial recognition technology</b>
+                <ol>
+                    <li><b>Amazon</b> previously promoted its cloud-based face recognition service named 
+                        <b>Rekognition</b> to law enforcement agencies. However, in a June 2020 blog post,
+                        the company announced it was planning a one-year moratorium on the use of its
+                        technology by police. The rationale for this was to allow time for US federal
+                        laws to be initiated, to protect human rights and civil liberties.</li>
+                    <li><b>Apple</b> uses facial recognition to help users quickly unlock their phones, log in 
+                        to apps, and make purchases.</li>
+                    <li><b>Google</b> incorporates the technology into <b>Google Photos</b> and uses it 
+                        to sort pictures and automatically tag them based on the people recognized.</li>
+                    <li><b>McDonald's</b> has used facial recognition in its Japanese restaurants to assess 
+                        the quality of customer service provided there, by analyzing whether its
+                        employees are smiling while assisting customers.</li>
+                </ol>
+            </td>
+        </tr>
+        <tr> 
+            <td>
+                <img src="{{url_for('static', filename='ml4.png')}}", width="600", height="250" />
+                <form action="/my-link/" method="post">
+                <br>
+                <label for="Your Name">Name:</label>
+                <input type="text" id="Your Name" name="fname" placeholder="Your Name"><br><br>
+                <label for="Your Id">Id:</label>
+                <input type="text" id="Your Id" name="id" placeholder="Your Id"><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Click me" /><br>
+                </form>
+                <form action="/my-train/">
+                    For Training Model: 
+                    <input type="submit" value="Train me" />
+                    <button><a href="recog.html" type="submit">Face Recoginition</a></button>
+                </form>
+            </td>
+            <td><img src="{{url_for('static', filename='ml3.png')}}", width="400", height="200" />    
+            <img src="{{url_for('static', filename='ml2.png')}}", width="300", height="300" />
+            </td>
+        </tr>
+    </table>
+    </div>
+   
+</body>
+</html>
